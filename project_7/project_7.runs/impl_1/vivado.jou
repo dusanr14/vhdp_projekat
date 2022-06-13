@@ -2,11 +2,11 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Jun  8 21:12:06 2022
-# Process ID: 4040
+# Start of session at: Mon Jun 13 17:37:30 2022
+# Process ID: 8688
 # Current directory: C:/Users/Dusan/Desktop/8_semestar/system_level/project_7/project_7.runs/impl_1
-# Command line: vivado.exe -log top_pivot.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_pivot.tcl -notrace
-# Log file: C:/Users/Dusan/Desktop/8_semestar/system_level/project_7/project_7.runs/impl_1/top_pivot.vdi
+# Command line: vivado.exe -log ip_pivot.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ip_pivot.tcl -notrace
+# Log file: C:/Users/Dusan/Desktop/8_semestar/system_level/project_7/project_7.runs/impl_1/ip_pivot.vdi
 # Journal file: C:/Users/Dusan/Desktop/8_semestar/system_level/project_7/project_7.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
-source top_pivot.tcl -notrace
+source ip_pivot.tcl -notrace

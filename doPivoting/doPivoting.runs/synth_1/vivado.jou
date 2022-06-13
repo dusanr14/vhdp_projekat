@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Jun  6 19:24:06 2022
+# Process ID: 1116
+# Current directory: C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.runs/synth_1
+# Command line: vivado.exe -log ip_pivot.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ip_pivot.tcl
+# Log file: C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.runs/synth_1/ip_pivot.vds
+# Journal file: C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ip_pivot.tcl -notrace

@@ -239,7 +239,7 @@ begin
     --Combinatorial Circuits
     process( dout_tvalid_s,dout_tdata_s,state_reg, start, i_reg,i_next, j_reg,j_next, data1_in, data2_in, pivotCol_reg,pivotCol_next, pivot_reg,pivot_next, newRow_reg, newRow_next,pivotColVal_reg,pivotColVal_next, addr1_reg ,addr1_next ,
                                                                                                                      en1_reg,en1_next, we1_reg,we1_next , data1_out_reg,data1_out_next,
-                                                                                                                       addr2_reg ,addr2_next , en2_reg,en2_next, we2_reg,we2_next, data2_out_reg,data2_out_next)
+                                                                                                                     addr2_reg ,addr2_next , en2_reg,en2_next, we2_reg,we2_next, data2_out_reg,data2_out_next)
     begin
         --Default Assignments
             state_next <= state_reg;
@@ -280,16 +280,17 @@ begin
                 a_i_s_1 <= (others => '0');
                 b_i_s_1 <= (others => '0');
                     
-                c_i_s_1 <= (others => '0');
-                a_i_s_1 <= (others => '0');
-                b_i_s_1 <= (others => '0');
+                c_i_s_2 <= (others => '0');
+                a_i_s_2 <= (others => '0');
+                b_i_s_2 <= (others => '0');
            case state_reg is
             when idle =>
                     ready <= '1';
                     
-                    i_next <= (others => '0');
+                    
                     if(start = '1') then
                         state_next <= s1;
+                        i_next <= (others => '0');
                         addr1_next <= "1010000011111"; --5151
                         we1_next <= '0';
                         we2_next <= '0';
@@ -358,11 +359,11 @@ begin
                     pivotColVal_next(conv_integer(i_reg)) <= data1_in;
                     addr1_next <= STD_LOGIC_VECTOR(unsigned(addr1_reg) + COLSIZE);
                     i_next <= STD_LOGIC_VECTOR(unsigned(i_reg) + 1);
-                    if(i_reg = 50) then
+                    if(i_reg = 51) then ----------------------------------------------NOVO!!!!!!!1
                        i_next <= (others => '0');
                        state_next <= S8;
                        addr1_next <= std_logic_vector(to_unsigned(COLSIZE, 13));
-                       addr1_next <= std_logic_vector(to_unsigned(COLSIZE+COLSIZE, 13));
+                       addr2_next <= std_logic_vector(to_unsigned(COLSIZE+COLSIZE, 13));
                        j_next <= (others => '0');
                     else
                        state_next <= S7;
@@ -373,9 +374,9 @@ begin
                     a_i_s_1 <= newRow_reg(conv_integer(i_reg));
                     b_i_s_1 <= pivotColVal_reg(conv_integer(j_reg));
                     
-                    c_i_s_1 <= data2_in;
-                    a_i_s_1 <= newRow_reg(conv_integer(i_reg));
-                    b_i_s_1 <= pivotColVal_reg(conv_integer(j_reg) + 1);
+                    c_i_s_2 <= data2_in;
+                    a_i_s_2 <= newRow_reg(conv_integer(i_reg));
+                    b_i_s_2 <= pivotColVal_reg(conv_integer(j_reg) + 1);
                     
                     state_next <= S9;
               when S9 =>

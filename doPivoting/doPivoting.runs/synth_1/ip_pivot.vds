@@ -1,0 +1,480 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Jun  6 19:24:06 2022
+# Process ID: 1116
+# Current directory: C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.runs/synth_1
+# Command line: vivado.exe -log ip_pivot.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ip_pivot.tcl
+# Log file: C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.runs/synth_1/ip_pivot.vds
+# Journal file: C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ip_pivot.tcl -notrace
+Command: synth_design -top ip_pivot -part xc7z010clg400-1 -mode Out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1312
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1151.586 ; gain = 25.141
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ip_pivot' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:59]
+	Parameter COLSIZE bound to: 101 - type: integer 
+	Parameter ROWSIZE bound to: 51 - type: integer 
+INFO: [Synth 8-3491] module 'divider_32' declared at 'C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/do_pivoting.vhd:34' bound to instance 'div' of component 'divider_32' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'divider_32' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/do_pivoting.vhd:45]
+INFO: [Synth 8-3491] module 'div_gen_0' declared at 'C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.runs/synth_1/.Xil/Vivado-1116-DESKTOP-QI02RAP/realtime/div_gen_0_stub.vhdl:5' bound to instance 'div' of component 'div_gen_0' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/do_pivoting.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'div_gen_0' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.runs/synth_1/.Xil/Vivado-1116-DESKTOP-QI02RAP/realtime/div_gen_0_stub.vhdl:18]
+INFO: [Synth 8-256] done synthesizing module 'divider_32' (1#1) [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/do_pivoting.vhd:45]
+	Parameter WIDTHA bound to: 32 - type: integer 
+	Parameter WIDTHB bound to: 32 - type: integer 
+	Parameter SIGNED_UNSIGNED bound to: signed - type: string 
+INFO: [Synth 8-3491] module 'dsp' declared at 'C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/dsp.vhd:34' bound to instance 'duv' of component 'dsp' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:140]
+INFO: [Synth 8-638] synthesizing module 'dsp' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/dsp.vhd:44]
+	Parameter WIDTHA bound to: 32 - type: integer 
+	Parameter WIDTHB bound to: 32 - type: integer 
+	Parameter SIGNED_UNSIGNED bound to: signed - type: string 
+INFO: [Synth 8-256] done synthesizing module 'dsp' (2#1) [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/dsp.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'ip_pivot' (3#1) [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:59]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1221.750 ; gain = 95.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1221.750 ; gain = 95.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1221.750 ; gain = 95.305
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.153 . Memory (MB): peak = 1221.750 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.gen/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'div/div'
+Finished Parsing XDC File [c:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.gen/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'div/div'
+Parsing XDC File [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/constrs_1/new/constraint1.xdc]
+Finished Parsing XDC File [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/constrs_1/new/constraint1.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1347.363 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.157 . Memory (MB): peak = 1357.621 ; gain = 10.258
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1357.621 ; gain = 231.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1357.621 ; gain = 231.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for div/div. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1357.621 ; gain = 231.176
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'addr1_next_reg' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:196]
+WARNING: [Synth 8-327] inferring latch for variable 'we1_reg_reg' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:229]
+WARNING: [Synth 8-327] inferring latch for variable 'pivotCol_next_reg' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:192]
+WARNING: [Synth 8-327] inferring latch for variable 'dividend_tdata_s_reg' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:131]
+WARNING: [Synth 8-327] inferring latch for variable 'dividend_tvalid_s_reg' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:132]
+WARNING: [Synth 8-327] inferring latch for variable 'divisor_tdata_s_reg' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:133]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1357.621 ; gain = 231.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   13 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 108   
+	               13 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	              32x32  Multipliers := 1     
++---Muxes : 
+	  10 Input   32 Bit        Muxes := 103   
+	   2 Input   32 Bit        Muxes := 7     
+	  10 Input   13 Bit        Muxes := 1     
+	  10 Input    7 Bit        Muxes := 1     
+	  10 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP m_reg_s0, operation Mode is: A2*B.
+DSP Report: register m_reg_s0 is absorbed into DSP m_reg_s0.
+DSP Report: operator m_reg_s0 is absorbed into DSP m_reg_s0.
+DSP Report: operator m_reg_s0 is absorbed into DSP m_reg_s0.
+DSP Report: Generating DSP m_reg_s0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator m_reg_s0 is absorbed into DSP m_reg_s0.
+DSP Report: operator m_reg_s0 is absorbed into DSP m_reg_s0.
+DSP Report: Generating DSP m_reg_s0, operation Mode is: A2*B2.
+DSP Report: register m_reg_s0 is absorbed into DSP m_reg_s0.
+DSP Report: register m_reg_s0 is absorbed into DSP m_reg_s0.
+DSP Report: operator m_reg_s0 is absorbed into DSP m_reg_s0.
+DSP Report: operator m_reg_s0 is absorbed into DSP m_reg_s0.
+DSP Report: Generating DSP m_reg_s0, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register m_reg_s0 is absorbed into DSP m_reg_s0.
+DSP Report: operator m_reg_s0 is absorbed into DSP m_reg_s0.
+DSP Report: operator m_reg_s0 is absorbed into DSP m_reg_s0.
+DSP Report: Generating DSP p_reg_s_reg, operation Mode is: (C'-A2:B2)'.
+DSP Report: register p_reg_s_reg is absorbed into DSP p_reg_s_reg.
+DSP Report: register p_reg_s_reg is absorbed into DSP p_reg_s_reg.
+DSP Report: register m1_reg_s_reg is absorbed into DSP p_reg_s_reg.
+DSP Report: register p_reg_s_reg is absorbed into DSP p_reg_s_reg.
+DSP Report: operator p_reg_s0 is absorbed into DSP p_reg_s_reg.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[12] with 1st driver pin 'addr1_reg_reg[12]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[12] with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address1[12] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[11] with 1st driver pin 'addr1_reg_reg[11]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[11] with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address1[11] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[10] with 1st driver pin 'addr1_reg_reg[10]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[10] with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address1[10] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[9] with 1st driver pin 'addr1_reg_reg[9]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[9] with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address1[9] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[8] with 1st driver pin 'addr1_reg_reg[8]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[8] with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address1[8] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[7] with 1st driver pin 'addr1_reg_reg[7]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[7] with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address1[7] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[6] with 1st driver pin 'addr1_reg_reg[6]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[6] with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address1[6] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[5] with 1st driver pin 'addr1_reg_reg[5]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[5] with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address1[5] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[4] with 1st driver pin 'addr1_reg_reg[4]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[4] with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address1[4] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[3] with 1st driver pin 'addr1_reg_reg[3]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[3] with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address1[3] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[2] with 1st driver pin 'addr1_reg_reg[2]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[2] with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address1[2] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[1] with 1st driver pin 'addr1_reg_reg[1]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[1] with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address1[1] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[0] with 1st driver pin 'addr1_reg_reg[0]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address1[0] with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address1[0] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[31]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[30]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[29]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[28]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[27]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[26]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[25]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[24]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[23]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[22]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[21]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[20]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[19]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[18]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[17]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[16]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[15]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[14]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[13]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[12]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[11]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[10]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[9]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[8]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[7]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[6]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[5]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[4]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[3]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[2]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[1]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'data1_out_reg_reg[0]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:170]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin en1_out with 1st driver pin 'en1_reg_reg/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:168]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin en1_out with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:168]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net en1_out is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:168]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address2[12] with 1st driver pin 'addr2_reg_reg[12]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address2[12] with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address2[12] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address2[11] with 1st driver pin 'addr2_reg_reg[11]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address2[11] with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address2[11] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address2[10] with 1st driver pin 'addr2_reg_reg[10]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address2[10] with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address2[10] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address2[9] with 1st driver pin 'addr2_reg_reg[9]/Q' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin address2[9] with 2nd driver pin 'GND' [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address2[9] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address2[8] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address2[7] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address2[6] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address2[5] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address2[4] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address2[3] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address2[2] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address2[1] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net address2[0] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:173]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[31] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[30] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[29] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[28] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[27] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[26] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[25] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[24] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[23] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[22] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[21] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[20] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[19] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[18] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[17] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[16] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[15] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[14] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[13] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[12] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[11] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[10] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[9] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[8] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[7] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[6] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[5] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[4] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[3] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[2] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[1] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data2_out[0] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:176]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net en2_out is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:174]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net we2 is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:175]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:229]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:169]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1357.621 ; gain = 231.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping	Report (see note below)
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp         | A2*B            | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp         | (PCIN>>17)+A*B  | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp         | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|dsp         | (PCIN>>17)+A2*B | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp         | (C'-A2:B2)'     | 14     | 18     | 32     | -      | 32     | 1    | 1    | 1    | -    | -     | 0    | 1    | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1357.621 ; gain = 231.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1357.621 ; gain = 231.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:164]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:164]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:164]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:164]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.srcs/sources_1/new/ip_pivot.vhd:164]
+INFO: [Common 17-14] Message 'Synth 8-6858' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1357.621 ; gain = 231.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1357.621 ; gain = 231.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1357.621 ; gain = 231.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1357.621 ; gain = 231.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1357.621 ; gain = 231.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1357.621 ; gain = 231.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1357.621 ; gain = 231.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |div_gen_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |div_gen_0_bbox |     1|
++------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1357.621 ; gain = 231.176
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 381 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1357.621 ; gain = 95.305
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1357.621 ; gain = 231.176
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1357.621 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1357.621 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+24 Infos, 6 Warnings, 200 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 1357.621 ; gain = 231.176
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Dusan/Desktop/8_semestar/system_level/doPivoting/doPivoting.runs/synth_1/ip_pivot.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ip_pivot_utilization_synth.rpt -pb ip_pivot_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  6 19:25:17 2022...
