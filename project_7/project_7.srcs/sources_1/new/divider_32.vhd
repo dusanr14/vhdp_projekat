@@ -63,6 +63,6 @@ begin
         m_axis_dout_tvalid => dout_tvalid,
         m_axis_dout_tdata => dout_tdata_55
     );
-    dout_tdata <= dout_tdata_55(31 DOWNTO 0);
+    dout_tdata <= dout_tdata_55(55 DOWNTO 24);
 end Behavioral;
 

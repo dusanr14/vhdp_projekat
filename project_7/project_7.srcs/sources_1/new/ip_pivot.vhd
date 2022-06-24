@@ -54,7 +54,9 @@ entity ip_pivot is
            we2 : out STD_LOGIC;
            
            start : in STD_LOGIC;
-           ready: out STD_LOGIC
+           ready: out STD_LOGIC;
+           
+           mux_sel: out std_logic
            );
 end ip_pivot;
 
@@ -81,7 +83,7 @@ architecture Behavioral of ip_pivot is
                 res_o: out std_logic_vector(31 downto 0));
         end component dsp;
    
-    type state_type is (idle,S1, S2, S3, S4, S5, S6, S7, S8,S9, S10, S11, S12, S13, S14);
+    type state_type is (idle,S1, S2, S3, S4, S5, S6); --, S7, S8,S9, S10, S11, S12, S13, S14
     signal state_reg, state_next: state_type;
  
  --signals for counters
@@ -283,12 +285,16 @@ begin
                 c_i_s_2 <= (others => '0');
                 a_i_s_2 <= (others => '0');
                 b_i_s_2 <= (others => '0');
+                
+                mux_sel <= '1';
+                
            case state_reg is
             when idle =>
                     ready <= '1';
-                    
+                    mux_sel <= '0';
                     
                     if(start = '1') then
+                        mux_sel <= '1';
                         state_next <= s1;
                         i_next <= (others => '0');
                         addr1_next <= "1010000011111"; --5151
@@ -317,7 +323,7 @@ begin
                     state_next <= S3;
                end if;
              when S4 =>
-                    newRow_next(conv_integer(i_reg)) <= dout_tdata_s;
+                   newRow_next(conv_integer(i_reg)) <= dout_tdata_s;
                     dividend_tvalid_s <= '1';
                     divisor_tvalid_s <= '1';
                     dividend_tdata_s <= pivot_reg;
@@ -333,11 +339,12 @@ begin
                    dividend_tvalid_s <= '0';
                    divisor_tvalid_s <= '0';
                    newRow_next(conv_integer(i_reg)) <= dout_tdata_s;
+                   addr1_next <= "0000000000000";
                    i_next <= STD_LOGIC_VECTOR(unsigned(i_reg) + 1);
                    if(i_reg = 100) then
                         state_next <= S6;
-                        addr1_next <= "0000000000001";
-                        data1_out_next <= newRow_reg(0);
+                        --addr1_next <= "0000000000001";
+                        --data1_out_next <= newRow_reg(0);
                         we1_next <= '1';
                         i_next <= (others => '0');
                    else
@@ -349,74 +356,76 @@ begin
                    addr1_next <= STD_LOGIC_VECTOR(unsigned(addr1_reg) + 1);
                    
                    if(addr1_reg = 100) then
-                         state_next <= S7;
-                         addr1_next <= STD_LOGIC_VECTOR(unsigned(pivotCol_reg(12 downto 0)) + COLSIZE);
+                         --state_next <= S7; promena skalice!!!!!!!!!!!!!!
+                         state_next <= idle;
+                         --addr1_next <= STD_LOGIC_VECTOR(unsigned(pivotCol_reg(12 downto 0)) + COLSIZE);
                          we1_next <= '0';
-                    else
-                        state_next <= S6;
+                    else                                          
+                        state_next <= S6; 
+                        
                     end if;
-             when S7 =>
-                    pivotColVal_next(conv_integer(i_reg)) <= data1_in;
-                    addr1_next <= STD_LOGIC_VECTOR(unsigned(addr1_reg) + COLSIZE);
-                    i_next <= STD_LOGIC_VECTOR(unsigned(i_reg) + 1);
-                    if(i_reg = 51) then ----------------------------------------------NOVO!!!!!!!1
-                       i_next <= (others => '0');
-                       state_next <= S8;
-                       addr1_next <= std_logic_vector(to_unsigned(COLSIZE, 13));
-                       addr2_next <= std_logic_vector(to_unsigned(COLSIZE+COLSIZE, 13));
-                       j_next <= (others => '0');
-                    else
-                       state_next <= S7;
-                    end if;
-                         
-             when S8 =>
-                    c_i_s_1 <= data1_in;
-                    a_i_s_1 <= newRow_reg(conv_integer(i_reg));
-                    b_i_s_1 <= pivotColVal_reg(conv_integer(j_reg));
-                    
-                    c_i_s_2 <= data2_in;
-                    a_i_s_2 <= newRow_reg(conv_integer(i_reg));
-                    b_i_s_2 <= pivotColVal_reg(conv_integer(j_reg) + 1);
-                    
-                    state_next <= S9;
-              when S9 =>
-                    state_next <= S10;
-              when S10 =>
-                    state_next <= S11;
-              when S11 =>
-                    we1_next <= '1';
-                    we2_next <= '1';
-                    data1_out_next <= res_o_s_1;
-                    data2_out_next <= res_o_s_2;
-                    
-                    if( i_reg = COLSIZE - 1) then
-                        state_next <= S12;
-                    else
-                        state_next <= S13;    
-                    end if;   
-              when S12 =>
-                    we1_next <= '0';
-                    we2_next <= '0';
-                    
-                    if(j_reg = ROWSIZE - 2) then
-                        state_next <= idle;    
-                     else
-                        state_next <= S14;
-                    end if;
-               when S13 =>
-                    we1_next <= '0';
-                    we2_next <= '0';
-                        i_next <= STD_LOGIC_VECTOR(unsigned(i_reg) + 1);
-                        --j_next <= STD_LOGIC_VECTOR(unsigned(j_reg) + 2);
-                        addr1_next <= STD_LOGIC_VECTOR(unsigned(addr1_reg) + 1);
-                        addr2_next <= STD_LOGIC_VECTOR(unsigned(addr2_reg) + 1); 
-                        state_next <= S8;
-                when S14 =>
-                         i_next <= (others => '0');
-                         j_next <= STD_LOGIC_VECTOR(unsigned(j_reg) + 2);
-                        addr1_next <= STD_LOGIC_VECTOR(unsigned(addr1_reg) + COLSIZE);
-                        addr2_next <= STD_LOGIC_VECTOR(unsigned(addr2_reg) + COLSIZE); 
-                        state_next <= S8;    
+             --when S7 =>
+             --       pivotColVal_next(conv_integer(i_reg)) <= data1_in;
+             --       addr1_next <= STD_LOGIC_VECTOR(unsigned(addr1_reg) + COLSIZE);
+             --       i_next <= STD_LOGIC_VECTOR(unsigned(i_reg) + 1);
+             --       if(i_reg = 51) then ----------------------------------------------NOVO!!!!!!!1
+             --          i_next <= (others => '0');
+             --          state_next <= S8;
+             --          addr1_next <= std_logic_vector(to_unsigned(COLSIZE, 13));
+              --         addr2_next <= std_logic_vector(to_unsigned(COLSIZE+COLSIZE, 13));
+            --           j_next <= (others => '0');
+            --        else
+            --           state_next <= S7;
+           --         end if;
+           --              
+           --  when S8 =>
+            --        c_i_s_1 <= data1_in;
+           --         a_i_s_1 <= newRow_reg(conv_integer(i_reg));
+           --         b_i_s_1 <= pivotColVal_reg(conv_integer(j_reg));
+           --         
+           --         c_i_s_2 <= data2_in;
+           --         a_i_s_2 <= newRow_reg(conv_integer(i_reg));
+           --         b_i_s_2 <= pivotColVal_reg(conv_integer(j_reg) + 1);
+           --         
+           --         state_next <= S9;
+           --   when S9 =>
+           --         state_next <= S10;
+           --   when S10 =>
+          --          state_next <= S11;
+          --    when S11 =>
+          --          we1_next <= '1';
+          --          we2_next <= '1';
+          --          data1_out_next <= res_o_s_1;
+          --          data2_out_next <= res_o_s_2;
+          --          
+          --          if( i_reg = COLSIZE - 1) then
+          --              state_next <= S12;
+          --          else
+          --              state_next <= S13;    
+          --          end if;   
+          --    when S12 =>
+          --          we1_next <= '0';
+          --          we2_next <= '0';
+          --          
+          --          if(j_reg = ROWSIZE - 2) then
+          --              state_next <= idle;    
+          --           else
+          --              state_next <= S14;
+          --          end if;
+          --     when S13 =>
+          --          we1_next <= '0';
+          --          we2_next <= '0';
+          --              i_next <= STD_LOGIC_VECTOR(unsigned(i_reg) + 1);
+          --              --j_next <= STD_LOGIC_VECTOR(unsigned(j_reg) + 2);
+          --              addr1_next <= STD_LOGIC_VECTOR(unsigned(addr1_reg) + 1);
+          --              addr2_next <= STD_LOGIC_VECTOR(unsigned(addr2_reg) + 1); 
+          --              state_next <= S8;
+          --      when S14 =>
+          --               i_next <= (others => '0');
+          --               j_next <= STD_LOGIC_VECTOR(unsigned(j_reg) + 2);
+          --              addr1_next <= STD_LOGIC_VECTOR(unsigned(addr1_reg) + COLSIZE);
+          --              addr2_next <= STD_LOGIC_VECTOR(unsigned(addr2_reg) + COLSIZE); 
+          --              state_next <= S8;    
            end case;
     end process;                                                                                                                   
       

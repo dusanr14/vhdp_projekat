@@ -81,7 +81,9 @@ component ip_pivot
            we2 : out STD_LOGIC;
            
            start : in STD_LOGIC;
-           ready: out STD_LOGIC
+           ready: out STD_LOGIC;
+           
+           mux_sel : out STD_LOGIC
            );
 end component;
 
@@ -104,6 +106,9 @@ signal address2_mux1 : STD_LOGIC_VECTOR(12 DOWNTO 0);
 signal data2_out_demux1 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 signal en2_out_mux1 : STD_LOGIC;
 signal we2_mux1 : STD_LOGIC;
+
+SIGNAL mux_sel_s:STD_LOGIC;
+
 begin
 
 bram:blk_mem_gen_0
@@ -143,13 +148,14 @@ ip_core: ip_pivot
            we2 => we2_mux1,
            
            start => start,
-           ready => ready
+           ready => ready,
+           mux_sel => mux_sel_s
            );
            
-process(en_s, we_s, addr_s, data_in_s, start,
+process(en_s, we_s, addr_s, data_in_s, start,mux_sel_s,
         address2_mux1, data2_in_mux1, en2_out_mux1, we2_mux1, doutb_demuxin) is
 begin
-    if(start = '0') then
+    if(mux_sel_s = '0') then
         addrb_muxout <= addr_s;
         dinb_muxout <= data_in_s;
         enb_muxout <= en_s;
